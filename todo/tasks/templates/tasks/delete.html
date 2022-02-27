@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<style>
+body {
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,203,238,0.4290091036414566) 0%, rgba(142,195,205,1) 100%, rgba(7,7,232,1) 100%);
+}
+
+.container{
+text-align: center;
+color:red;
+font-size: 25px;
+width: 300px;
+height: 200px;
+padding-top: 100px;
+}
+#smb{
+font-size: 20px;
+
+}
+#smb:hover{
+ background-color: black;
+ color:red;
+}
+
+</style>
+
+
+<div class="container">
+    <p>
+        Do you want to delete "{{ item }} " ?
+    </p>
+
+
+    <a href="{% url 'list' %}"> </a>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input id="smb" type="submit" name="Confirm">
+    </form>
+
+</div>
+
+
